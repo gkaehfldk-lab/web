@@ -1,0 +1,187 @@
+@font-face {
+  font-family: 'Inter:Regular';
+  src: url('https://static.figma.com/font/Inter_1') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Noto Sans KR:Regular';
+  src: url('https://static.figma.com/font/NotoSansKR-VF_2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+  font-family: 'Inter:Regular', 'Noto Sans KR:Regular', sans-serif;
+  color: #ffffff;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.login-page {
+  display: grid;
+  min-height: 100vh;
+  min-height: 100dvh;
+  place-items: center;
+  overflow: hidden;
+  padding: 32px 20px;
+  background-image: linear-gradient(
+    138.62876583512383deg,
+    rgb(130, 215, 246) 31.948%,
+    rgb(137, 232, 227) 80.983%
+  );
+}
+
+.login-panel {
+  width: min(340px, 100%);
+  transform: translateY(-4px);
+}
+
+h1 {
+  margin: 0 0 27px;
+  font-family: 'Inter:Regular', 'Noto Sans KR:Regular', sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.field {
+  position: relative;
+  display: block;
+  height: 60px;
+}
+
+.field img {
+  position: absolute;
+  z-index: 1;
+  top: 5px;
+  left: 12px;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.field input {
+  width: 100%;
+  height: 60px;
+  padding: 0 24px 0 66px;
+  color: #333333;
+  border: 1px solid #0877f6;
+  border-radius: 39px;
+  outline: none;
+  background: #ffffff;
+  font-family: 'Inter:Regular', 'Noto Sans KR:Regular', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.field input::placeholder {
+  color: #e2d7d7;
+  opacity: 1;
+}
+
+.field input:focus {
+  border-color: #006be5;
+  box-shadow: 0 0 0 3px rgb(8 119 246 / 16%);
+}
+
+.field input[aria-invalid='true'] {
+  border-color: #d94a4a;
+}
+
+button {
+  width: 100%;
+  height: 60px;
+  padding: 0;
+  color: #ffffff;
+  border: 0;
+  border-radius: 39px;
+  background: #6eb0ee;
+  cursor: pointer;
+  font-family: 'Inter:Regular', 'Noto Sans KR:Regular', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition:
+    background-color 160ms ease,
+    transform 120ms ease;
+}
+
+button:hover {
+  background: #61a8ea;
+}
+
+button:focus-visible {
+  outline: 3px solid rgb(255 255 255 / 75%);
+  outline-offset: 3px;
+}
+
+button:active {
+  transform: scale(0.99);
+}
+
+.form-status,
+.sr-only {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  border: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .login-panel {
+    width: min(340px, 88vw);
+  }
+
+  h1 {
+    font-size: clamp(30px, 9vw, 40px);
+  }
+}
+
+@media (max-height: 480px) {
+  .login-page {
+    overflow-y: auto;
+  }
+}

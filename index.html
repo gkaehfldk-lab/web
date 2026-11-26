@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#82d7f6" />
+    <title>관리자 로그인</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main class="login-page">
+      <section class="login-panel" aria-labelledby="login-title">
+        <h1 id="login-title">관리자 로그인</h1>
+
+        <form class="login-form" id="login-form" novalidate>
+          <label class="field">
+            <span class="sr-only">아이디</span>
+            <img src="7ce3e.png" alt="" width="50" height="50" />
+            <input
+              id="user-id"
+              name="userId"
+              type="text"
+              placeholder="아이디"
+              autocomplete="username"
+              required
+            />
+          </label>
+
+          <label class="field">
+            <span class="sr-only">비밀번호</span>
+            <img src="3dbcb.png" alt="" width="50" height="50" />
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="비밀번호"
+              autocomplete="current-password"
+              required
+            />
+          </label>
+
+          <button type="submit">로그인</button>
+          <p class="form-status" id="form-status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
