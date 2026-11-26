@@ -157,6 +157,22 @@ button:active {
   transform: scale(0.99);
 }
 
+.idchk {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: -18px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.idchk input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: #0877f6;
+}
+
 .form-status,
 .sr-only {
   position: absolute;
