@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #20232a;
+  font-family: Arial, sans-serif;
+}
+
+.gallery-page {
+  padding: 40px 16px;
+}
+
+.gallery-page h1 {
+  width: min(800px, 100%);
+  margin: 0 auto 24px;
+  font-size: 28px;
+}
+
+.wrap {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  width: min(800px, 100%);
+  margin: 0 auto;
+}
+
+.gallery-item {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgb(32 35 42 / 12%);
+}
+
+.gallery-art {
+  aspect-ratio: 1;
+  background:
+    radial-gradient(ellipse at 30% 35%, rgb(255 255 255 / 75%) 0 12%, transparent 13%),
+    linear-gradient(135deg, #72c6ef, #5472d3);
+}
+
+.gallery-item:nth-child(4n + 2) .gallery-art {
+  background:
+    radial-gradient(ellipse at 70% 65%, rgb(255 255 255 / 65%) 0 18%, transparent 19%),
+    linear-gradient(135deg, #ffb36b, #ee6475);
+}
+
+.gallery-item:nth-child(4n + 3) .gallery-art {
+  background:
+    radial-gradient(ellipse at 35% 70%, rgb(255 255 255 / 65%) 0 16%, transparent 17%),
+    linear-gradient(135deg, #62d2a2, #288c98);
+}
+
+.gallery-item:nth-child(4n) .gallery-art {
+  background:
+    radial-gradient(ellipse at 65% 30%, rgb(255 255 255 / 70%) 0 14%, transparent 15%),
+    linear-gradient(135deg, #c59df2, #7255bd);
+}
+
+.gallery-item figcaption {
+  padding: 10px 12px;
+  font-size: 14px;
+  text-align: center;
+}
